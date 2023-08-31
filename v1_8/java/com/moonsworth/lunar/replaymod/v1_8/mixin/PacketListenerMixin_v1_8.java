@@ -78,7 +78,7 @@ public abstract class PacketListenerMixin_v1_8 implements PacketListenerBridge {
             at = @At("HEAD")
     )
     private void ichor$addMarker(String name, CallbackInfo ci) {
-        if (name.equals(MarkerProcessor.MARKER_NAME_END_CUT)) {
+        if (name != null && name.equals(MarkerProcessor.MARKER_NAME_END_CUT)) {
             ReplayModGuiLink_v1_8.recordedThisSession = true;
         }
     }

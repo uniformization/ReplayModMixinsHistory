@@ -69,7 +69,7 @@ public abstract class PacketListenerMixin_v1_17 {
             at = @At("HEAD")
     )
     private void ichor$addMarker(String name, CallbackInfo ci) {
-        if (name.equals(MarkerProcessor.MARKER_NAME_END_CUT)) {
+        if (name != null && name.equals(MarkerProcessor.MARKER_NAME_END_CUT)) {
             ReplayModGuiLink_Impl.recordedThisSession = true;
         }
     }
